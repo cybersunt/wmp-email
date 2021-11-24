@@ -5,18 +5,21 @@
 </head>
 <body style="padding: 0; margin: 0; width: 100%;  -webkit-text-size-adjust:none;">
 <table border="0" cellpadding="0" cellspacing="0" class="pad_null"
-       style="width: 100%; border-collapse: separate; padding-top: 16px; padding-bottom: 16px; padding-left: 16px; padding-right: 16px; background: white; font-family: Helvetica, Arial;">
+       style="width: 100%; border-collapse: separate; padding-top: 0; padding-bottom: 16px; padding-left: 16px; padding-right: 16px; background: white; font-family: Helvetica, Arial;">
     <tbody>
     <tr>
         <td>
             <table border="0" cellpadding="0" cellspacing="0" class="pad_null"
-                   style="width: 100%; max-width: 600px; padding-top: 22px; padding-bottom:36px; border-collapse: separate; margin: 0 auto; background: white;">
+                   style="width: 100%; max-width: 600px; padding-top: 0px; padding-bottom:0px; border-collapse: separate; margin: 0 auto; background: white;">
                 <tbody>
                 <tr>
-                    <td style="vertical-align: top;">
-                        <a th:href="${model.portalHostName}"><img
-                                src="cid:logo-rp.png"
-                                style="margin: 0; padding: 0; width: 120px;"/></a>
+                    <td style="background-color: #0055a6; padding: 16px; vertical-align: top;">
+                        <a th:href="${model.portalHostName}">
+                            <img src="https://hr.gpages.tools.russianpost.ru/mailbringfriend/images/logo.png" width="200" height="26" alt="«ПочтаТех»" style="max-width: 100%; vertical-align: middle; line-height: 100%; border: 0;">
+<!--                            <img-->
+<!--                                src="cid:logo-rp.png"-->
+<!--                                style="margin: 0; padding: 0; width: 120px;"/>-->
+                        </a>
                     </td>
                 </tr>
                 </tbody>
@@ -25,22 +28,47 @@
                    style="width: 100%; max-width: 600px; border-collapse: separate; margin: 0 auto; padding-top: 16px; background: white;">
                 <tbody>
                 <tr>
-                    <td style="vertical-align: top;  margin: 0; padding: 0; font-size: 14px; line-height: 18px; font-family: Arial, Helvetica; color: #808080;">
-                        <p>Здравствуйте, <span th:text="${model.fullName}">${model.fullName}</span></p>
-                        <p>Отправление <span th:text="${model.trackNumber}">${model.trackNumber}</span> успешно принято в отделении
-                            почтовой
-                            связи № <span th:text="${model.opsNumber}">${model.opsNumber}</span></p>
-                        <p>Номер ФД: <span th:text="${model.fiscalDocumentNumber}">${model.fiscalDocumentNumber}</span></p>
-                        <p th:if="${model.receiptUrl}">Электронный чек доступен на сайте <a th:href="${model.receiptUrl}">ofd.ru</a>
-                        </p>
-                        <p th:if="${model.rcpt}">Получатель: <span th:text="${model.rcpt}">${model.rcpt}</span></p>
+                    <td style="vertical-align: top;  margin: 0; padding: 0; font-size: 14px; line-height: 18px; font-family: Arial, Helvetica; color: black;">
+                        <h1>Здравствуйте, <span th:text="${model.fullName}">Анастасия Сергеевна</span>!</h1>
+                        <p><br></p>
+                        <p>Сегодня <span th:text="${model.date}">28 ноября</span> получена новая заявка <b><span th:text="${model.number}">№ 003333</span></b> для реализации в ОПС <b><span th:text="${model.ops}">248007</span></b>.</p>
+<!--                        <p><b>Заказчик:</b> <span th:text="${model.сustomerName}">Иванов Иван Иваныч</span></p>-->
+<!--                        <p><b>Телефон заказчика:</b> <span th:text="${model.сustomerPhone}">+7 960 2666 89 65</span></p>-->
+<!--                        <p><b>Стоимость услуг:</b> <span th:text="${model.сost">2500</span> руб.</p>-->
+<!--                        <p><b>Тип заявки:</b> <span th:text="${model.type}">разовая</span></p>-->
+<!--                        <p><br></p>-->
+<!--                        <p>Необходимо в срок до <b><span th:text="${model.duedate}">1 декабря</span></b> отправить почтальона для валидации заявки</p>-->
+<!--                        <p><b>По адресу:</b> <span th:text="${model.address}">г. Калуга, улица Ленина, дом 5</span></p>-->
+<!--                        <p><b>Получатель:</b> <span th:text="${model.addresseName}">Иванова Мария Ивановна</span></p>-->
+<!--                        <p><br></p>-->
+<!--                        <p>После валидации заявки почтальоном Вам нужно принять ее в работу или отклонить.</p>-->
+<!--                        <p><br></p>-->
+<!--                        <p>Посмотреть состав услуг по заявке и отследить ее статус можно на сайте <a href="pochta.ru/social/pochtamed/wmp" target="_blank">pochta.ru/social/pochtamed/wmp</a></p>-->
+                    </td>
+                    </tr>
+                <tr>
+                    <td style="vertical-align: top;  margin: 0; padding-left: 36px; font-size: 14px; line-height: 18px; font-family: Arial, Helvetica; color: black;">                                          <p><b>Заказчик:</b> <span th:text="${model.сustomerName}">Иванов Иван Иваныч</span></p>
+                        <p><b>Телефон заказчика:</b> <span th:text="${model.сustomerPhone}">+7 960 2666 89 65</span></p>
+                        <p><b>Стоимость услуг:</b> <span th:text="${model.сost">2500</span> руб.</p>
+                        <p><b>Тип заявки:</b> <span th:text="${model.type}">разовая</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;  margin: 0; padding: 0; font-size: 14px; line-height: 18px; font-family: Arial, Helvetica; color: black;">
+                        <p>Необходимо в срок до <b><span th:text="${model.duedate}">1 декабря</span></b> отправить почтальона для валидации заявки</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;  margin: 0; padding-left: 36px; font-size: 14px; line-height: 18px; font-family: Arial, Helvetica; color: black;">
+                        <p><b>По адресу:</b> <span th:text="${model.address}">г. Калуга, улица Ленина, дом 5</span></p>
+                        <p><b>Получатель:</b> <span th:text="${model.addresseName}">Иванова Мария Ивановна</span></p>
 
-                        <p>
-                        <p>Стоимость: <span th:text="${model.amount}">${model.amount}</span> руб.</p>
-                        <p th:if="${model.weight}">Масса: <span th:text="${model.weight}">${model.weight}</span> г</p>
-                        </p>
-
-                        <p>Отследить статус перемещения отправления можно на сайте pochta.ru</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;  margin: 0; padding-left: 0; font-size: 14px; line-height: 18px; font-family: Arial, Helvetica; color: black;">
+                        <p>После валидации заявки почтальоном Вам нужно принять ее в работу или отклонить.</p>
+                        <p>Посмотреть состав услуг по заявке и отследить ее статус можно на сайте <a href="http://pochta.ru/social/pochtamed/wmp" target="_blank">pochta.ru/social/pochtamed/wmp</a></p>
                     </td>
                 </tr>
                 </tbody>
@@ -57,15 +85,7 @@
                 </tr>
                 <tr style="height: 42px; background: white;">
                     <td style="vertical-align: middle; width: 100%; margin-bottom: 0; background-color: white; text-align: left; padding-top: 0;">
-                        <p style="margin: 0; padding: 0; font-size: 14px; line-height: 18px; font-family: Arial, Helvetica; color: #808080;">
-                            Вы также можете отследить свое отправление в официальном приложении Почты России. Приложение
-                            поможет вам добавлять неограниченное количество отправлений, получать Push-уведомления об
-                            изменении статусов, заполнить бланк извещения, вызвать курьера или заказать доставку посылки
-                            на дом, получить информацию об отделении.
-                        </p>
-                        <br/>
-
-                        <p style="margin: 0; padding: 0; font-size: 14px; line-height: 18px; font-family: Arial, Helvetica; color: #808080;">
+                        <p style="margin: 0; padding: 0; font-size: 14px; line-height: 18px; font-family: Arial, Helvetica; color: black;">
                             С уважением, команда Почты России.
                         </p>
                     </td>
@@ -102,7 +122,7 @@
                                         <img alt="Доступно в Google Play"
                                              border="0"
                                              height="41"
-                                             src="cid:google_play.png"
+                                             src="https://static.pochta.ru/footer/images/appStore.svg"
                                              style="display: block;"
                                              width="138"
                                         />
@@ -122,7 +142,7 @@
                                                 alt="Загрузите в App Store"
                                                 border="0"
                                                 height="41"
-                                                src="cid:app_store.png"
+                                                src="https://static.pochta.ru/footer/images/googlePlay.svg"
                                                 style="display: block;"
                                                 width="120"
                                         />
